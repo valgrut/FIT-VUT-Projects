@@ -1,0 +1,30 @@
+.IPPcode18
+DEFVAR GF@cislo1
+DEFVAR GF@cislo2
+DEFVAR GF@result
+
+MOVE GF@cislo1 int@5
+MOVE GF@cislo2 int@5
+
+LT GF@result GF@cislo1 GF@cislo2
+WRITE GF@result
+write string@\010
+
+GT GF@result GF@cislo1 GF@cislo2
+WRITE GF@result
+write string@\010
+
+EQ GF@result GF@cislo1 GF@cislo2
+WRITE GF@result
+write string@\010
+
+LT GF@result string@ab string@ba
+WRITE GF@result
+write string@\010
+
+TYPE GF@result string@shit
+WRITE GF@result
+write string@\010
+
+#BREAK
+

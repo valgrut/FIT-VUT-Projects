@@ -1,0 +1,18 @@
+.IPPcode18 # koment
+DEFVAR GF@cislo
+DEFVAR GF@znak
+DEFVAR GF@result
+
+# INT2CHAR
+WRITE string@Napiš\032číslo:\032
+READ GF@cislo int
+INT2CHAR GF@result GF@cislo
+write string@výsledný\032znak\032je:\032 
+WRITE GF@result
+
+# STRI2INT
+WRITE string@Napiš\032znak:\032
+READ GF@znak string
+STRI2INT GF@result GF@znak int@0
+write string@výsledné\032číslo\032je:\032 
+WRITE GF@result

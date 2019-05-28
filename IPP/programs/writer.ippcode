@@ -1,0 +1,11 @@
+.IPPcode18 # koment
+DEFVAR GF@string
+DEFVAR GF@cislo2
+DEFVAR GF@result
+
+WRITE string@Napiš\032první\032řetězec:\032
+READ GF@string string
+
+WRITE GF@string
+write string@\010
+

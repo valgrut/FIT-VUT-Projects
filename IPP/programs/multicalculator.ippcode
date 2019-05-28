@@ -1,0 +1,53 @@
+.IPPcode18
+WRITE string@Vitej_v_kalkulatoru
+DEFVAR GF@operator
+DEFVAR GF@cislo1
+DEFVAR GF@cislo2
+DEFVAR GF@result
+DEFVAR GF@continue
+
+LABEL continue
+
+WRITE string@Napis_Prvni_Cislo:
+READ GF@cislo1 int
+
+WRITE string@Napis_Druhe_Cislo:
+READ GF@cislo2 int
+
+WRITE string@Napis_operaci_kterou_chces_provest:
+WRITE string@add_sub_mul_idiv
+READ GF@operator string
+
+JUMPIFEQ add GF@operator string@add
+JUMPIFEQ sub GF@operator string@sub
+JUMPIFEQ mul GF@operator string@mul
+JUMPIFEQ idiv GF@operator string@idiv
+
+WRITE string@Zadal_jsi_nepodporovany_operator!
+JUMP chyba
+
+LABEL add
+ADD GF@result GF@cislo1 GF@cislo2
+JUMP end
+
+LABEL sub
+SUB GF@result GF@cislo1 GF@cislo2
+JUMP end
+
+LABEL mul
+MUL GF@result GF@cislo1 GF@cislo2
+JUMP end
+
+LABEL idiv
+IDIV GF@result GF@cislo1 GF@cislo2
+JUMP end
+
+LABEL end
+WRITE string@Vysledek_je:
+WRITE GF@result
+WRITE string@Chces_Jeste_pocitat?_(Y/N)
+READ GF@continue string
+JUMPIFEQ continue GF@continue string@Y
+
+LABEL chyba
+BREAK

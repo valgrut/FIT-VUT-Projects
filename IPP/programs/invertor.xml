@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program language="IPPcode18">
+      <instruction order="1" opcode="DEFVAR">
+            <arg1 type="var">GF@input</arg1>
+      </instruction>
+      <instruction order="2" opcode="DEFVAR">
+            <arg1 type="var">GF@result</arg1>
+      </instruction>
+      <instruction order="3" opcode="DEFVAR">
+            <arg1 type="var">GF@len</arg1>
+      </instruction>
+      <instruction order="4" opcode="DEFVAR">
+            <arg1 type="var">GF@tmp</arg1>
+      </instruction>
+      <instruction order="5" opcode="MOVE">
+            <arg1 type="var">GF@result</arg1>
+            <arg2 type="string"></arg2>
+      </instruction>
+      <instruction order="6" opcode="WRITE">
+            <arg1 type="string">Zadej\032Retezec\032k\032inverznuti</arg1>
+      </instruction>
+      <instruction order="7" opcode="READ">
+            <arg1 type="var">GF@input</arg1>
+            <arg2 type="type">string</arg2>
+      </instruction>
+      <instruction order="8" opcode="STRLEN">
+            <arg1 type="var">GF@len</arg1>
+            <arg2 type="var">GF@input</arg2>
+      </instruction>
+      <instruction order="9" opcode="JUMPIFEQ">
+            <arg1 type="label">end</arg1>
+            <arg2 type="var">GF@len</arg2>
+            <arg3 type="int">0</arg3>
+      </instruction>
+      <instruction order="10" opcode="SUB">
+            <arg1 type="var">GF@len</arg1>
+            <arg2 type="var">GF@len</arg2>
+            <arg3 type="int">1</arg3>
+      </instruction>
+      <instruction order="11" opcode="LABEL">
+            <arg1 type="label">inverse</arg1>
+      </instruction>
+      <instruction order="12" opcode="GETCHAR">
+            <arg1 type="var">GF@tmp</arg1>
+            <arg2 type="var">GF@input</arg2>
+            <arg3 type="var">GF@len</arg3>
+      </instruction>
+      <instruction order="13" opcode="CONCAT">
+            <arg1 type="var">GF@result</arg1>
+            <arg2 type="var">GF@result</arg2>
+            <arg3 type="var">GF@tmp</arg3>
+      </instruction>
+      <instruction order="14" opcode="JUMPIFEQ">
+            <arg1 type="label">end</arg1>
+            <arg2 type="var">GF@len</arg2>
+            <arg3 type="int">0</arg3>
+      </instruction>
+      <instruction order="15" opcode="SUB">
+            <arg1 type="var">GF@len</arg1>
+            <arg2 type="var">GF@len</arg2>
+            <arg3 type="int">1</arg3>
+      </instruction>
+      <instruction order="16" opcode="JUMP">
+            <arg1 type="label">inverse</arg1>
+      </instruction>
+      <instruction order="17" opcode="LABEL">
+            <arg1 type="label">end</arg1>
+      </instruction>
+      <instruction order="18" opcode="WRITE">
+            <arg1 type="string">Výsledek:\032</arg1>
+      </instruction>
+      <instruction order="19" opcode="WRITE">
+            <arg1 type="var">GF@result</arg1>
+      </instruction>
+      <instruction order="20" opcode="WRITE">
+            <arg1 type="string"></arg1>
+      </instruction>
+      <instruction order="21" opcode="WRITE">
+            <arg1 type="string">zkusim\032malou\032upravu:\032</arg1>
+      </instruction>
+      <instruction order="22" opcode="SETCHAR">
+            <arg1 type="var">GF@result</arg1>
+            <arg2 type="int">0</arg2>
+            <arg3 type="string">A</arg3>
+      </instruction>
+      <instruction order="23" opcode="WRITE">
+            <arg1 type="var">GF@result</arg1>
+      </instruction>
+</program>

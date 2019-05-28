@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program language="IPPcode18">
+      <instruction order="1" opcode="DEFVAR">
+            <arg1 type="var">GF@cislo</arg1>
+      </instruction>
+      <instruction order="2" opcode="DEFVAR">
+            <arg1 type="var">GF@znak</arg1>
+      </instruction>
+      <instruction order="3" opcode="DEFVAR">
+            <arg1 type="var">GF@result</arg1>
+      </instruction>
+      <instruction order="4" opcode="WRITE">
+            <arg1 type="string">Napiš\032číslo:\032</arg1>
+      </instruction>
+      <instruction order="5" opcode="READ">
+            <arg1 type="var">GF@cislo</arg1>
+            <arg2 type="type">int</arg2>
+      </instruction>
+      <instruction order="6" opcode="INT2CHAR">
+            <arg1 type="var">GF@result</arg1>
+            <arg2 type="var">GF@cislo</arg2>
+      </instruction>
+      <instruction order="7" opcode="WRITE">
+            <arg1 type="string">výsledný\032znak\032je:\032</arg1>
+      </instruction>
+      <instruction order="8" opcode="WRITE">
+            <arg1 type="var">GF@result</arg1>
+      </instruction>
+      <instruction order="9" opcode="WRITE">
+            <arg1 type="string">Napiš\032znak:\032</arg1>
+      </instruction>
+      <instruction order="10" opcode="READ">
+            <arg1 type="var">GF@znak</arg1>
+            <arg2 type="type">string</arg2>
+      </instruction>
+      <instruction order="11" opcode="STRI2INT">
+            <arg1 type="var">GF@result</arg1>
+            <arg2 type="var">GF@znak</arg2>
+            <arg3 type="int">0</arg3>
+      </instruction>
+      <instruction order="12" opcode="WRITE">
+            <arg1 type="string">výsledné\032číslo\032je:\032</arg1>
+      </instruction>
+      <instruction order="13" opcode="WRITE">
+            <arg1 type="var">GF@result</arg1>
+      </instruction>
+</program>

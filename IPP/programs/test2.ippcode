@@ -1,0 +1,33 @@
+. IPPcode18 #
+DEFVAR GF@counter
+MOVE GF@counter string@ # Inicializace proměnné na prázdný řetězec
+#Jednoduchá iterace, dokud nebude splněna zadaná podmínka
+# komentar
+LABEL while #dalsikoment
+JUMPIFEQ end GF@counter string@aaa
+WRITE string@counter\032obsahuje\032
+WRITE GF@counter
+WRITE string@\010
+CONCAT GF@counter GF@counter string@a
+JUMP while
+LABEL end
+WRITE string@řetězec\032s\032lomítkem\032\092\032a\010novým\035řádkem
+
+LABEL end xyz
+PUSHS GF@sdfgrgrh
+PUSHS shrgerger
+PUSHFRAME
+RETURN
+CALL GF@spatnyoperand
+DEFVAR GF@nedovoleny TF@pocet LF@operandu
+CALL __spravnyoperand
+BLBAINSTR GF@arg1
+ADD GF@counter int@666 int@-10
+	  ADD GF@counter int@128 int@256
+	#komentar
+	
+
+#  	komentar
+#
+
+    CONCAT GF@counter GF@counter string@a #s sfefwef komeeent

@@ -1,0 +1,28 @@
+.IPPcode18  #cmnt
+DEFVAR GF@cislo1 #koment
+DEFVAR GF@cislo2
+DEFvaR GF@result
+
+WriTe string@Napis_Prvni_Cislo:
+read GF@cislo1 int
+
+write string@Napis_Druhe_Cislo:<>&
+READ GF@cislo2 int
+
+add GF@result GF@cislo1 GF@cislo2
+WRIte int@Vysledek_je:  
+int@napis_cislo:     !!!!!
+wRITE GF@result
+
+DEFVAR GF@boolean
+MOVE GF@boolean bool@True
+write GF@boolean
+
+LABEL vlk 
+#LABEL vlk #55
+
+
+READ GF@cislo2 int
+
+break
+

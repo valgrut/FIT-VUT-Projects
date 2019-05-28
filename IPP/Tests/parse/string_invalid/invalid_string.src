@@ -1,0 +1,5 @@
+.IPPcode18
+DEFVAR GF@result
+
+MOVE GF@result string@shit\
+

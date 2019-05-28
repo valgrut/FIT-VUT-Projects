@@ -1,0 +1,15 @@
+.IPPcode18 # koment
+DEFVAR GF@cislo1
+DEFVAR GF@cislo2
+DEFVAR GF@result
+
+WRITE string@Napiš\032první\032číslo:
+READ GF@cislo1 int
+
+WRITE string@Napiš\032druhé\032číslo:
+READ GF@cislo2 int
+
+IDIV GF@result GF@cislo1 GF@cislo2
+WRITE string@Výsledek\032součtu:
+WRITE GF@result
+

@@ -1,0 +1,31 @@
+.IPPcode18
+
+DEFVAR GF@input
+DEFVAR GF@result
+DEFVAR GF@len
+DEFVAR GF@tmp
+
+MOVE GF@result string@
+
+WRITE string@Zadej\032Retezec\032k\032inverznuti
+READ GF@input string
+
+STRLEN GF@len GF@input
+JUMPIFEQ end GF@len int@0
+SUB GF@len GF@len int@1
+
+LABEL inverse
+GETCHAR GF@tmp GF@input GF@len
+CONCAT GF@result GF@result GF@tmp
+JUMPIFEQ end GF@len int@0
+SUB GF@len GF@len int@1
+JUMP inverse
+
+LABEL end
+write string@Výsledek:\032
+WRITE GF@result
+write string@   #novy radek
+
+WRITE string@zkusim\032malou\032upravu:\032
+SETCHAR GF@result int@0 string@A 
+WRITE GF@result

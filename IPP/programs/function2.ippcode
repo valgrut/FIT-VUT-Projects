@@ -1,0 +1,39 @@
+.IPPcode18
+
+createframe
+pushframe
+DEFVAR LF@result
+
+PUSHS string@dlouhej_retezec
+
+CALL functionA
+POPS LF@result
+WRITE LF@result
+
+JUMP end
+
+
+# definice funkciiiiii
+LABEL functionA
+	createframe 
+	pushframe
+	defvar LF@prvniargument
+	defvar LF@vysledek
+
+	POPS LF@prvniargument
+
+	STRLEN LF@vysledek LF@prvniargument
+
+	PUSHS LF@vysledek  
+
+	POPFRAME
+
+	RETURN
+
+# konec definice funkciiiiiiii
+
+LABEL end
+write string@\010
+#BREAK
+
+

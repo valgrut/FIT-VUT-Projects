@@ -1,0 +1,48 @@
+.IPPcode18
+DEFVAR GF@cislo1
+DEFVAR GF@cislo2
+DEFVAR GF@result
+
+#spatny pocet operandu
+
+#spatny typ operandu na danem miste (neocekavany typ)
+READ GF@cislo1 int@42
+READ int@123 int
+READ GF@cislo1 guildwars
+
+#neodpovidajici typ a hodnota
+
+
+#neodpovidajici format promenne
+WRITE GF@89kkjd
+WRITE GF@_??"'!/(?:}*&^
+WRITE GF@
+
+#neexistujici frame ( LT, TF) (pred vytvorenim TF a pushnutim LF)
+WRITE TF@promenna
+
+#neexistujici promenna
+WRITE GF@promennaNeexistuje
+WRITE LF@promennaNeexistuje
+WRITE TF@promennaNeexistuje
+
+#neodpovidajici format retezce, cisla, boolu
+WRITE int@jkielasdf
+WRITE string@\spatnejretezec&@
+WRITE bool@spatnejBool
+
+#neexistujici instrukce
+GUILDWARS string@Napis_Prvni_Cislo:
+
+#problemy s retezcovymi operacemi
+CONCAT GF@outstr string@ int@456
+
+#neodpovidajici typy u instrkci jako add, mul, ...
+ADD GF@cislo1 int@5 int@blbost
+MUL GF@cislo1 string@nic bool@True
+
+#neexistujici label
+JUMPIFEQ end GF@cislo1 int@0
+
+
+

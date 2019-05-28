@@ -1,0 +1,41 @@
+.IPPcode18 # koment
+DEFVAR GF@cislo
+DEFVAR GF@retezec
+DEFVAR GF@empty
+DEFVAR GF@boolean
+DEFVAR GF@result
+
+MOVE GF@cislo int@42
+MOVE GF@retezec string@retezec
+MOVE GF@empty string@
+MOVE GF@boolean bool@true
+
+TYPE GF@result GF@cislo
+WRITE GF@result
+write string@\010
+
+TYPE GF@result GF@retezec
+WRITE GF@result
+write string@\010
+
+TYPE GF@result GF@empty
+WRITE GF@result
+write string@\010
+
+TYPE GF@result GF@boolean
+WRITE GF@result
+write string@\010
+
+
+DPRINT GF@result
+
+PUSHS string@neco
+PUSHS string@neco2
+PUSHS string@neco3
+
+POPS GF@result
+
+POPS GF@result
+
+break
+

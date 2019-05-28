@@ -1,0 +1,31 @@
+.IPPcode18
+
+DEFVAR GF@result
+
+CALL functionA
+WRITE string@Jsem_Za_Funkci
+JUMP end
+
+
+LABEL functionA
+WRITE string@Jsem_UVNITR_Funkce
+STRLEN GF@result string@delka\032je\032A
+WRITE GF@result
+
+STRLEN GF@result string@
+WRITE GF@result
+
+STRLEN GF@result string@delka\032retezce
+WRITE GF@result
+
+RETURN
+
+
+LABEL end
+WRITE string@SUCCESS
+MOVE GF@result string@neco
+GETCHAR GF@result GF@result int@2
+WRITE GF@result
+BREAK
+
+

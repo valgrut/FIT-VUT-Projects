@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program language="IPPcode18">
+      <instruction order="1" opcode="WRITE">
+            <arg1 type="string">counter\032obsahuje\032_&lt;&gt;C&quot;!'(/|€¶ŧ←-.?ůů§)ú...</arg1>
+      </instruction>
+      <instruction order="2" opcode="WRITE">
+            <arg1 type="string">řetězec\032&amp;@°~|€¶ŧ←↓→øþŁ'`][Đđ^}{@&amp;12345998181}{*&amp;^%$!@</arg1>
+      </instruction>
+</program>
