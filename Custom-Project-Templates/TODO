@@ -1,0 +1,14 @@
+- Update tagu, diky nimz se vim muze pohybovat po zdrojovem kodu a napovidat nazvy
+pridat do makefilu nebo do automatizace buildeni tohle:
+	ctags --c--kinds=lfv
+a spoustet to po kazde uprave kodu. (takze to strcit treba pred build nebo nekam)
+
+
+- pridat do tohoto vzoroveho templatu zakladni kostru man-pages stran!
+Mela by byt v tusim ze IPK projektu nebo ISA projektu.
+
+- uplne basic makefile pro uplne zakladni projekty, ktere nepotrebuji linkovani a tak.
+pouze target all: a implicitni pravidlo %cosi.
+Viz makefile pro mou pripravu k IJC semestralce, tam jsem ten makefile pouzival pro hodne malych zdrojaku
+a vylepsit ho o automaticke pridavani OBJS, podobne jako to ma PEPE u jeho "examples".
+On to ma tak ze prvne spusti script ktery mu vygeneruje makefile s prislusnymi targety podle jmen scriptuu ktere jsou v adresari a pak se spusti makefile.
