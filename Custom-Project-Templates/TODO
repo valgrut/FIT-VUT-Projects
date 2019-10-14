@@ -12,3 +12,8 @@ pouze target all: a implicitni pravidlo %cosi.
 Viz makefile pro mou pripravu k IJC semestralce, tam jsem ten makefile pouzival pro hodne malych zdrojaku
 a vylepsit ho o automaticke pridavani OBJS, podobne jako to ma PEPE u jeho "examples".
 On to ma tak ze prvne spusti script ktery mu vygeneruje makefile s prislusnymi targety podle jmen scriptuu ktere jsou v adresari a pak se spusti makefile.
+
+
+- makefile pro vicero targetu - na projekty ktere se skladaji jen z xyz.cpp
+
+- makefile generator : http://solver.assistedcoding.eu/makefilegen
